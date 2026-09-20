@@ -1,83 +1,233 @@
-🎓 Ace Scholar
+🎓 ACE-Scholar
 
-AI-powered academic navigation assistant for Moodle, DigiCampus, and Canvas.
+Your Academic Compass
 
-Ace Scholar helps students find information inside fragmented academic platforms without having to manually search through confusing menus.
+ACE-Scholar is an AI-powered academic navigation assistant that helps students find information inside complex academic platforms such as Moodle, DigiCampus, and Canvas.
 
-Instead of asking “Where is my attendance?” and figuring out which menu to open, students can simply ask Ace Scholar. They can also upload a screenshot of their current screen and ask where to find something.
+Instead of manually searching through multiple menus, students can ask ACE-Scholar what they need in natural language or upload a screenshot of the screen they are currently viewing.
 
----
+The system understands the request, identifies the relevant academic intent and platform, finds a verified navigation route, and presents clear step-by-step instructions.
 
-✨ What Ace Scholar Does
-
-Ace Scholar combines natural-language understanding, platform-specific navigation knowledge, and screenshot analysis to guide students to the right location.
-
-💬 Natural-Language Navigation
-
-Ask questions such as:
-
-- “Where can I check my attendance?”
-- “Where are my assignment marks?”
-- “Where can I find my exam results?”
-- “Where can I see my pending fees?”
-- “Where do I find the enrollment form?”
-
-The application converts the query into:
-
-Question → Intent → Platform → Target → Navigation Path → Instructions
-
----
-
-📸 Screenshot-Based Assistance
-
-Students can upload a screenshot of their current academic platform and ask a question such as:
-
-«“I am on this screen. Where can I find my attendance?”»
-
-Ace Scholar can analyse the screenshot, identify relevant screen information, understand the user's request, and provide a step-by-step navigation path.
-
-When the available information is insufficient, the application can ask for clarification instead of blindly guessing.
+Student Question / Screenshot
+            ↓
+      Query Understanding
+            ↓
+       Intent Detection
+            ↓
+      Platform Detection
+            ↓
+       Target Detection
+            ↓
+     Navigation Engine
+            ↓
+   Verified Route / Search /
+   Clarification / Alternative
+            ↓
+       Student Guidance
 
 ---
 
-🔎 Universal Academic Search
+🚀 Why ACE-Scholar?
 
-The application can search across the supported academic knowledge for relevant information and organize results into meaningful groups.
+Academic institutions often use multiple digital platforms for different parts of student life.
+
+A student may need to navigate through:
+
+- Moodle for courses and attendance
+- DigiCampus for academic information
+- Canvas for course content and activities
+- Institution-specific menus and course structures
+
+The problem is not always finding the information — it is knowing where to look for it.
+
+ACE-Scholar turns natural-language questions into actionable navigation guidance.
+
+Example
+
+Instead of searching through menus:
+
+«"Where can I find my DBMS attendance?"»
+
+ACE-Scholar can understand:
+
+Intent      → Attendance
+Platform    → Moodle
+Course      → DBMS
+Destination → Attendance
+
+and produce a route such as:
+
+Moodle
+  → Dashboard
+  → My Courses
+  → DBMS
+  → Attendance
 
 ---
 
-🧭 Visual Navigation
+✨ Core Features
 
-Navigation results can include:
+💬 1. Natural-Language Academic Navigation
 
-- Breadcrumbs
-- Step-by-step instructions
-- Completed/done states
-- Screen understanding
+Students can ask questions in normal language.
+
+Examples:
+
+Where can I find my attendance?
+
+Where are my DBMS assignment marks?
+
+Where can I see my exam results?
+
+Where can I find my course materials?
+
+Where is the enrollment form?
+
+Show me everything related to DBMS.
+
+The navigation pipeline converts a question into:
+
+Query
+  → Intent
+  → Platform
+  → Target
+  → Navigation Path
+  → Instructions
+
+Clear queries can be resolved locally using the application's verified navigation knowledge, allowing fast responses without unnecessary AI calls.
+
+When the rules cannot confidently determine the user's intent, the Gemini-powered AI layer can assist with interpretation.
+
+---
+
+📸 2. Screenshot-Based Navigation Assistance
+
+Students can upload a screenshot of the academic platform they are currently viewing.
+
+For example:
+
+«"I am on this screen. Where can I find my attendance?"»
+
+ACE-Scholar uses Gemini vision capabilities to analyse the screenshot and understand relevant screen information.
+
+The system can determine:
+
+- Which supported platform is visible
+- What screen the student appears to be viewing
+- What the student is trying to find
+- Which part of the navigation route has already been completed
+- What steps remain
+
+Instead of repeatedly showing the entire route, the interface can indicate where the student currently is and guide them through the remaining steps.
+
+Example:
+
+Moodle
+  ✓ Dashboard
+  ✓ My Courses
+  → DBMS
+  → Attendance
+
+The application also validates uploaded images for:
+
+- Supported image type
+- Actual file content
+- File size
+- Corrupted images
+- Unsupported or irrelevant images
+
+If the system cannot confidently understand the screenshot, it communicates the uncertainty instead of pretending to know.
+
+---
+
+🔎 3. Universal Academic Search
+
+ACE-Scholar supports broader academic searches such as:
+
+«"Show me everything related to DBMS."»
+
+Search results can be organized into categories such as:
+
+- Courses
+- Attendance
+- Assignments
+- Marks
+- Materials
+- Exams
+- Announcements
+
+Only available and verified navigation information is presented.
+
+Areas that are not mapped for a platform are explicitly labelled rather than being invented.
+
+---
+
+🧭 4. Visual Navigation
+
+Navigation results are designed to be easy to follow.
+
+The interface can provide:
+
+Breadcrumb Navigation
+
+Moodle › Dashboard › My Courses › DBMS › Attendance
+
+Numbered Steps
+
+1. Open Dashboard.
+2. Select My Courses.
+3. Open DBMS.
+4. Select Attendance.
+
+Route Progress
+
+The interface can show completed steps and indicate the student's current location.
+
+Additional Guidance
+
+Responses can include:
+
+- Understanding of the user's request
+- Detected screen
 - Notices
 - Warnings
-- Alternative routes when an exact route cannot be verified
+- Alternative routes
+- Confidence information
+
+A copy-steps action is also available for convenient reuse.
 
 ---
 
 🌐 Supported Platforms
 
-Ace Scholar currently supports:
+ACE-Scholar currently provides platform-specific navigation support for:
 
-- Moodle
-- DigiCampus
-- Canvas
+Platform| Support
+Moodle| ✅
+DigiCampus| ✅
+Canvas| ✅
 
-The platform architecture is modular so additional academic platforms can be added without rewriting the entire application.
+Each platform has its own navigation profile and route data.
+
+This separation makes the system easier to maintain and extend as additional academic platforms are introduced.
 
 ---
 
-🏗️ Architecture
+🧠 Intelligent Navigation Architecture
 
-User Question / Screenshot
+ACE-Scholar uses a layered navigation architecture.
+
+User Input
+    │
+    ├── Text Question
+    │
+    └── Screenshot + Question
             │
             ▼
-     Query Understanding
+      Input Validation
+            │
+            ▼
+      Query Processing
             │
             ▼
       Intent Detection
@@ -86,58 +236,154 @@ User Question / Screenshot
      Platform Detection
             │
             ▼
-     Navigation Engine
-            │
-            ├── Verified Route
-            ├── Clarification
-            ├── Alternative
-            └── Partial Result
+       Target Detection
             │
             ▼
-       Structured Response
+    Navigation Knowledge
             │
             ▼
-        Student UI
+     Route Resolution
+            │
+      ┌─────┼──────────┐
+      ▼     ▼          ▼
+    Route  Search   Clarify
+      │
+      ▼
+ Structured Response
+      │
+      ▼
+     UI Guidance
 
-Project Structure
+The application distinguishes between verified routes, search results, clarification requests, partial results, and errors.
 
-public/               Frontend UI
-src/
-  ai/                 Gemini client, prompts and response parsers
-  platforms/          One profile per platform
-  api.js              API routes
-  app.js              Application setup
-  config.js           Configuration
-  intents.js          Intent detection
-  knowledge.js        Academic navigation knowledge
-  navigation.js       Navigation engine
-  query.js            Query processing
-  rateLimit.js        Request rate limiting
-  validate.js         Input validation
-tests/                Node.js test suites
-database.json         Platform navigation data
-server.js             Express server entry point
+This prevents uncertain AI output from automatically becoming a supposedly verified navigation path.
 
 ---
 
-🧠 AI + Reliability
+🤖 AI Integration
 
-Ace Scholar uses the Google Gemini API for:
+ACE-Scholar uses the Google Gemini API for AI-assisted capabilities.
+
+Gemini is used for:
 
 - Understanding ambiguous natural-language questions
 - Analysing uploaded screenshots
-- Identifying relevant platform/screen information
+- Identifying relevant screen information
+- Supporting intent and platform interpretation when deterministic rules are insufficient
 
-AI output is validated before it is used by the navigation system.
-
-The application is designed to avoid inventing navigation routes. If a verified route is unavailable, it can return a clarification, partial result, or alternative instead.
-
-The AI client also includes:
+The application includes an AI client layer with:
 
 - Request timeouts
 - Retry handling
-- Error typing
+- Typed AI errors
 - Structured response parsing
+- Graceful failure handling
+
+AI output is validated before being consumed by the application's navigation system.
+
+The system is designed to avoid treating unsupported AI-generated information as a verified route.
+
+---
+
+🛡️ Reliability & Error Handling
+
+ACE-Scholar is designed to fail safely when information is uncertain or services are unavailable.
+
+The application supports:
+
+- Input validation
+- Image validation
+- Image type detection from actual file content
+- Image size limits
+- Corruption detection
+- Request timeouts
+- Automatic retry handling
+- Typed AI errors
+- Graceful fallback behaviour
+- Clarification instead of guessing
+- Partial results when a verified route is unavailable
+- User-facing retry states
+- Rate limiting
+- Health monitoring
+
+When the application does not have enough verified information, it communicates that limitation instead of presenting an invented answer as fact.
+
+---
+
+🔐 Security
+
+Security considerations are built into the application architecture.
+
+Environment Variables
+
+API credentials are supplied through environment variables rather than hard-coded into the source code.
+
+GEMINI_API_KEY=your_key_here
+
+Input Protection
+
+The API validates incoming requests and uploaded images before processing them.
+
+Rate Limiting
+
+Requests are rate-limited to reduce abuse and unnecessary API usage.
+
+Secure Output Handling
+
+Frontend text is rendered safely without relying on unsafe HTML injection.
+
+API Health Endpoint
+
+The application provides a health endpoint without exposing secret credentials.
+
+---
+
+🏗️ Project Structure
+
+ACE-Scholar/
+│
+├── public/
+│   ├── index.html
+│   ├── app.js
+│   └── styles.css
+│
+├── src/
+│   ├── ai/
+│   │   ├── client.js
+│   │   ├── parsers.js
+│   │   └── prompts.js
+│   │
+│   ├── platforms/
+│   │   ├── canvas.js
+│   │   ├── digicampus.js
+│   │   ├── index.js
+│   │   └── moodle.js
+│   │
+│   ├── api.js
+│   ├── app.js
+│   ├── config.js
+│   ├── intents.js
+│   ├── knowledge.js
+│   ├── navigation.js
+│   ├── query.js
+│   ├── rateLimit.js
+│   └── validate.js
+│
+├── tests/
+│   ├── ai-client.test.js
+│   ├── api.test.js
+│   ├── helpers.js
+│   ├── navigation.test.js
+│   ├── query.test.js
+│   ├── rateLimit.test.js
+│   └── validate.test.js
+│
+├── database.json
+├── server.js
+├── package.json
+├── .env.example
+├── .gitignore
+└── README.md
 
 ---
 
@@ -145,101 +391,135 @@ The AI client also includes:
 
 "POST /api/route"
 
-Accepts:
+Main navigation endpoint.
+
+Request
 
 {
   "platform": "moodle",
-  "question": "Where can I check my attendance?",
+  "question": "Where can I find my DBMS attendance?",
   "image": "data:image/png;base64,..."
 }
 
-"image" is an optional PNG/JPEG/WebP data URL with a maximum size of approximately 6 MB.
+Parameters
 
-Response Modes
+Parameter| Description
+"platform"| Target academic platform
+"question"| User's natural-language request
+"image"| Optional PNG, JPEG, or WebP data URL
 
-"status: "ok", mode: "route""
+Images are subject to application-level size and validation rules.
 
-Returns:
+---
 
-- "route.breadcrumb"
-- "route.steps"
-- "understanding"
-- "screen"
-- "notices"
-- "warnings"
+Response Types
 
-Each route step can contain a "done" state.
+Successful Route
 
-A top-level "steps" array is also maintained for compatibility with the original client.
+status: "ok"
+mode: "route"
 
-"status: "ok", mode: "search""
+Can contain:
 
-Returns grouped search results through:
+route.breadcrumb
+route.steps
+understanding
+screen
+notices
+warnings
+
+Route steps may include completion information.
+
+---
+
+Search Response
+
+status: "ok"
+mode: "search"
+
+Search results are available through:
 
 search.groups[]
 
-"status: "clarify""
+---
 
-The application asks the user for clarification instead of guessing.
+Clarification Response
 
-Returns:
+status: "clarify"
+
+Used when the application requires more information instead of making an uncertain assumption.
+
+Contains:
 
 message
 options[]
 
-"status: "partial""
+---
 
-Returned when a verified route is unavailable for the selected platform.
+Partial Response
 
-May include:
+status: "partial"
+
+Used when a verified route is unavailable.
+
+The response can provide:
 
 alternatives
 approximateRoute
 
-Any approximate route is explicitly labelled.
+Approximate routes are explicitly labelled.
 
-"status: "error""
+---
 
-Returns:
+Error Response
+
+status: "error"
+
+Contains:
 
 code
 error
 retryable
 
-Other Endpoints
+---
+
+Additional Endpoints
 
 GET /api/platforms
 GET /api/health
 
-The health endpoint does not expose secrets.
-
 ---
 
-➕ Adding Another Platform
+➕ Extending ACE-Scholar
 
-To add a new academic platform:
+The platform-aware architecture makes it possible to add additional academic systems.
+
+To add a platform:
 
 1. Create a platform profile
 
-Create:
+src/platforms/<platform-id>.js
 
-src/platforms/<id>.js
+The profile contains platform information such as:
 
-The profile should define the platform name, aliases, example questions, and screenshot cues.
+- Name
+- Aliases
+- Example questions
+- Screenshot cues
 
 2. Register the platform
 
-Add it to:
+Update:
 
 src/platforms/index.js
 
 3. Add navigation knowledge
 
-Add a corresponding platform array to:
+Add the platform's route data to:
 
 database.json
 
-Each navigation entry requires:
+Navigation entries contain information such as:
 
 intent
 scope
@@ -247,65 +527,61 @@ path
 task_keywords
 verified_route
 
-"scope" can be:
+The supported scope values are:
 
 course
 global
 none
 
-A "course_step" can optionally be provided.
-
-The existing UI, intent detection, screenshot prompts, search system, and tests are designed to pick up the new platform architecture automatically.
+Optional course-specific navigation information can also be supplied.
 
 ---
 
 🧪 Testing
 
-Ace Scholar includes automated Node.js test suites covering areas such as:
+ACE-Scholar includes automated tests using Node.js's built-in test runner.
 
-- AI client behaviour
+The test suite covers important application behaviour including:
+
+- AI client handling
 - API responses
-- Navigation
+- Navigation logic
 - Query processing
 - Rate limiting
 - Input validation
 
-The project currently contains 71 tests.
+The current project contains 71 automated tests.
 
-The automated tests use a stubbed Gemini client, so live Gemini behaviour depends on the configured API key and model.
+The AI client is stubbed during automated testing so that the test suite does not depend on a live Gemini API request.
 
 ---
 
-⚙️ Local Setup
+⚙️ Local Development
 
 Requirements
 
 - Node.js
-- A Google Gemini API key
+- Google Gemini API key
 
-Install
+Install dependencies
 
 npm install
 
-Configure environment variables
+Configure environment
 
-Create a ".env" file based on:
-
-.env.example
-
-Set:
+Create a ".env" file based on ".env.example".
 
 GEMINI_API_KEY=your_key_here
 
-Optionally configure:
+An optional Gemini model can also be configured:
 
 GEMINI_MODEL=your_model
 
-Run
+Start the application
 
 npm start
 
-The server runs on port "3000" by default.
+The application uses port "3000" by default.
 
 Run tests
 
@@ -313,49 +589,72 @@ npm test
 
 ---
 
-🔐 Security
+⚠️ Current Limitations
 
-Secrets should never be committed to the repository.
+ACE-Scholar is designed around verified navigation knowledge rather than unrestricted web browsing.
 
-The project uses ".env" for local credentials and ".gitignore" excludes:
+Therefore:
 
-.env
-node_modules/
-*.log
-coverage/
-.cache/
+- Platform layouts can vary between institutions.
+- Menu labels may differ from the routes stored in the application.
+- Only mapped routes are treated as verified.
+- Some faculty-side workflows are not currently mapped.
+- Some academic features may not yet be available for every supported platform.
+- Course names and targets may require clarification when the user's wording is ambiguous.
+- Screenshot understanding depends on the quality and relevance of the uploaded image.
+- Live AI behaviour depends on Gemini availability, API configuration, and the selected model.
 
-Only ".env.example" is intended to be committed.
+ACE-Scholar provides navigation assistance; it does not replace the official academic platform or institution.
 
 ---
 
-⚠️ Honest Limitations
+🎯 Real-World Use
 
-- Navigation routes describe common platform layouts. Institutions can customize their menus, so labels may differ. The application therefore encourages users to verify the guidance against their own screen.
-- Only routes present in "database.json" are returned as verified routes.
-- Faculty-side tasks such as uploading marks, as well as unsupported features such as some Moodle announcements or DigiCampus materials, may not yet be mapped.
-- Course names are extracted from the user's own wording. Acronyms, course codes, or unusual phrasing may sometimes require clarification or rephrasing.
-- Automated tests use a stubbed Gemini client. Live AI behaviour depends on the configured Gemini API key and model.
-- Ace Scholar is a navigation assistant; it does not replace the official academic platform or institution.
+ACE-Scholar is designed for students who regularly interact with multiple academic systems and need a faster way to locate information.
+
+Potential use cases include:
+
+- Attendance tracking
+- Assignment discovery
+- Marks and grades
+- Course materials
+- Examination information
+- Academic forms
+- Course-specific information
+- Platform navigation assistance
+
+The platform-aware architecture can also be extended to support additional institutions and academic systems.
+
+---
+
+🔮 Future Scope
+
+Potential future improvements include:
+
+- Additional academic platforms
+- Institution-specific navigation profiles
+- More comprehensive academic knowledge bases
+- Deeper personalization
+- Improved screenshot understanding
+- More visual navigation cues
+- Expanded accessibility support
+- Additional academic workflows
+- Broader multilingual assistance
+
+---
+
+👩‍💻 Developer
+
+Nandini Sharma
+
+ACE-Scholar is an independently developed academic navigation assistant focused on making digital academic systems easier for students to navigate.
 
 ---
 
 🤖 AI Disclosure
 
-Product
+ACE-Scholar uses the Google Gemini API as part of its product functionality for natural-language interpretation and screenshot analysis.
 
-The core product uses the Google Gemini API to interpret ambiguous questions and analyse uploaded screenshots. AI output is validated and is not used to invent verified navigation routes.
+AI-assisted development tools were also used during development for implementation, debugging, testing, and documentation.
 
-Development
-
-During the HackDevengers 2.0 upgrade, an AI coding assistant (Claude) assisted with implementation and troubleshooting, including the intent pipeline, screenshot analysis, platform architecture, UI improvements, reliability work, testing, and documentation.
-
-The original Ace Scholar project was created independently before the hackathon. The HackDevengers 2.0 work substantially upgraded the existing project.
-
----
-
-👨‍💻 Developer
-
-Designed & developed by Nandini Sharma.
-
-Ace Scholar is an independently developed academic navigation project, substantially upgraded for HackDevengers 2.0.
+The application validates AI-generated information before using it within its navigation workflow and does not intentionally present unsupported AI output as a verified navigation route.
