@@ -1,0 +1,24 @@
+{
+  "name": "ace-schoolar",
+  "version": "2.0.0",
+  "description": "ACE-Scholar: AI-powered academic navigation assistant for Moodle, DigiCampus and Canvas.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test \"tests/*.test.js\""
+  },
+  "keywords": ["academic", "navigation", "moodle", "canvas", "digicampus", "gemini"],
+  "author": "Nandini Sharma",
+  "license": "ISC",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@google/genai": "^2.16.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}

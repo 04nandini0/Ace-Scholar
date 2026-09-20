@@ -1,0 +1,1140 @@
+{
+  "digicampus": [
+    {
+      "intent": "attendance",
+      "scope": "global",
+      "path": [
+        "Academics",
+        "Attendance"
+      ],
+      "course_step": 3,
+      "task_keywords": [
+        "check attendance",
+        "view attendance record",
+        "my attendance",
+        "attendance percentage"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to DigiCampus",
+          "description": "Access the DigiCampus portal with your student credentials."
+        },
+        {
+          "title": "Navigate to Academics",
+          "description": "Click on the 'Academics' or 'Student ERP' tab from the main menu."
+        },
+        {
+          "title": "Select Attendance",
+          "description": "Locate and click on the 'Attendance' or 'My Attendance' module."
+        },
+        {
+          "title": "View Attendance Details",
+          "description": "Review your attendance records for different courses."
+        }
+      ]
+    },
+    {
+      "intent": "assignments",
+      "scope": "course",
+      "path": [
+        "My Courses",
+        "{course}",
+        "Assignments"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "submit assignment",
+        "upload homework",
+        "turn in task",
+        "assignment submission portal"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to DigiCampus",
+          "description": "Access the DigiCampus portal with your student credentials."
+        },
+        {
+          "title": "Go to Course Page",
+          "description": "Navigate to the specific course where the assignment is due."
+        },
+        {
+          "title": "Find Assignment Link",
+          "description": "Locate the assignment link within the course content or 'Assignments' section."
+        },
+        {
+          "title": "Upload File",
+          "description": "Click 'Submit Assignment', browse for your file, and upload it."
+        },
+        {
+          "title": "Confirm Submission",
+          "description": "Ensure you receive a confirmation message for successful submission."
+        }
+      ]
+    },
+    {
+      "intent": "marks",
+      "scope": "global",
+      "path": [
+        "Academics",
+        "Gradebook"
+      ],
+      "course_step": 3,
+      "task_keywords": [
+        "view grades",
+        "check marks",
+        "see my results",
+        "academic scores"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to DigiCampus",
+          "description": "Access the DigiCampus portal with your student credentials."
+        },
+        {
+          "title": "Go to Academics/ERP",
+          "description": "Click on the 'Academics' or 'Student ERP' section."
+        },
+        {
+          "title": "Select Gradebook",
+          "description": "Find and click on 'Gradebook' or 'My Grades'."
+        },
+        {
+          "title": "Review Grades",
+          "description": "View your grades for all courses or specific assignments."
+        }
+      ]
+    },
+    {
+      "intent": "syllabus",
+      "scope": "course",
+      "path": [
+        "My Courses",
+        "{course}",
+        "Syllabus"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "find syllabus",
+        "course outline",
+        "access course plan",
+        "semester syllabus"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to DigiCampus",
+          "description": "Access the DigiCampus portal with your student credentials."
+        },
+        {
+          "title": "Navigate to Course Page",
+          "description": "Select the specific course from your 'Dashboard' or 'My Courses'."
+        },
+        {
+          "title": "Locate Syllabus",
+          "description": "Look for a section titled 'Syllabus', 'Course Information', or 'Course Resources'."
+        },
+        {
+          "title": "Download/View Syllabus",
+          "description": "Click on the syllabus document or link to view/download."
+        }
+      ]
+    },
+    {
+      "intent": "fees",
+      "scope": "none",
+      "path": [
+        "Finance",
+        "Fee Payments"
+      ],
+      "task_keywords": [
+        "pay fees",
+        "tuition payment",
+        "fee payment portal",
+        "make payment"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to DigiCampus",
+          "description": "Access the DigiCampus portal with your student credentials."
+        },
+        {
+          "title": "Go to Finance/Payments",
+          "description": "Click on the 'Finance' or 'Fee Payments' module in the ERP section."
+        },
+        {
+          "title": "Select Payment Option",
+          "description": "Choose the type of fee to pay and your preferred payment method."
+        },
+        {
+          "title": "Complete Transaction",
+          "description": "Follow the on-screen instructions to finalize the payment."
+        }
+      ]
+    },
+    {
+      "intent": "messaging",
+      "scope": "course",
+      "path": [
+        "My Courses",
+        "{course}",
+        "Faculty Info",
+        "Message"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "message professor",
+        "contact instructor",
+        "email faculty",
+        "send message teacher"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to DigiCampus",
+          "description": "Access the DigiCampus portal with your student credentials."
+        },
+        {
+          "title": "Go to Course Page",
+          "description": "Navigate to the relevant course page."
+        },
+        {
+          "title": "Find Faculty Contact",
+          "description": "Look for 'Faculty Info', 'Course Staff', or 'Communication' section."
+        },
+        {
+          "title": "Send Message",
+          "description": "Use the provided messaging tool or email link to contact your professor."
+        }
+      ]
+    },
+    {
+      "intent": "exams",
+      "scope": "course",
+      "path": [
+        "My Courses",
+        "{course}",
+        "Quiz"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "take quiz",
+        "start exam",
+        "attempt test",
+        "online quiz module"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to DigiCampus",
+          "description": "Access the DigiCampus portal with your student credentials."
+        },
+        {
+          "title": "Go to Course Page",
+          "description": "Navigate to the specific course where the quiz is assigned."
+        },
+        {
+          "title": "Find Quiz Link",
+          "description": "Locate and click on the quiz or test link within the course content."
+        },
+        {
+          "title": "Start Quiz",
+          "description": "Read instructions, then click 'Start Quiz' or 'Attempt Now'."
+        },
+        {
+          "title": "Submit Answers",
+          "description": "Answer all questions and click 'Submit Quiz' to finalize."
+        }
+      ]
+    },
+    {
+      "intent": "timetable",
+      "scope": "none",
+      "path": [
+        "Academics",
+        "Timetable"
+      ],
+      "task_keywords": [
+        "find timetable",
+        "view schedule",
+        "my class schedule",
+        "academic timetable"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to DigiCampus",
+          "description": "Access the DigiCampus portal with your student credentials."
+        },
+        {
+          "title": "Go to Academics/ERP",
+          "description": "Click on the 'Academics' or 'Student ERP' section."
+        },
+        {
+          "title": "Select Timetable",
+          "description": "Find and click on 'My Timetable' or 'Class Schedule'."
+        },
+        {
+          "title": "View Schedule",
+          "description": "Review your daily/weekly class schedule."
+        }
+      ]
+    },
+    {
+      "intent": "registration",
+      "scope": "none",
+      "path": [
+        "Student ERP",
+        "Course Registration"
+      ],
+      "task_keywords": [
+        "register courses",
+        "enroll in classes",
+        "select subjects",
+        "course registration portal"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to DigiCampus",
+          "description": "Access the DigiCampus portal with your student credentials."
+        },
+        {
+          "title": "Go to Registration",
+          "description": "Navigate to the 'Course Registration' or 'Enrollment' section in ERP."
+        },
+        {
+          "title": "Select Courses",
+          "description": "Browse available courses and add desired ones to your cart."
+        },
+        {
+          "title": "Confirm Enrollment",
+          "description": "Review your selection and confirm registration."
+        }
+      ]
+    },
+    {
+      "intent": "announcements",
+      "scope": "none",
+      "path": [
+        "Dashboard",
+        "Announcements"
+      ],
+      "note": "For a single course, open that course and check its 'Announcements' section instead.",
+      "task_keywords": [
+        "view announcements",
+        "check news",
+        "read notices",
+        "latest updates"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to DigiCampus",
+          "description": "Access the DigiCampus portal with your student credentials."
+        },
+        {
+          "title": "Check Dashboard",
+          "description": "Look for a 'Announcements' or 'News' block on your main dashboard."
+        },
+        {
+          "title": "Go to Course Announcements",
+          "description": "Alternatively, navigate to a specific course and check its 'Announcements' section."
+        },
+        {
+          "title": "Read Details",
+          "description": "Click on individual announcements to read the full details."
+        }
+      ]
+    },
+    {
+      "intent": "course",
+      "scope": "course",
+      "derived": true,
+      "path": [
+        "My Courses",
+        "{course}"
+      ],
+      "course_step": 2,
+      "task_keywords": [
+        "open course",
+        "find my course",
+        "course page",
+        "my courses"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to DigiCampus",
+          "description": "Access the DigiCampus portal with your student credentials."
+        },
+        {
+          "title": "Open Dashboard or My Courses",
+          "description": "Go to your 'Dashboard' or 'My Courses' list."
+        },
+        {
+          "title": "Select the Course",
+          "description": "Click the specific course you want to open."
+        }
+      ]
+    }
+  ],
+  "moodle": [
+    {
+      "intent": "attendance",
+      "scope": "course",
+      "path": [
+        "Dashboard",
+        "My courses",
+        "{course}",
+        "Attendance"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "check attendance moodle",
+        "my attendance record",
+        "moodle attendance",
+        "attendance status moodle"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Moodle",
+          "description": "Access the Moodle platform with your credentials."
+        },
+        {
+          "title": "Go to My Courses",
+          "description": "From the 'Dashboard', select the specific course."
+        },
+        {
+          "title": "Find Attendance Block",
+          "description": "Look for the 'Attendance' block or activity within the course."
+        },
+        {
+          "title": "View Attendance Report",
+          "description": "Click on 'Attendance' to see your personal attendance record."
+        }
+      ]
+    },
+    {
+      "intent": "assignments",
+      "scope": "course",
+      "path": [
+        "Dashboard",
+        "{course}",
+        "Assignment"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "submit assignment moodle",
+        "upload homework moodle",
+        "moodle assignment submission",
+        "turn in task"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Moodle",
+          "description": "Access the Moodle platform with your credentials."
+        },
+        {
+          "title": "Navigate to Course",
+          "description": "From the 'Dashboard', go to the relevant course."
+        },
+        {
+          "title": "Click Assignment Activity",
+          "description": "Find and click on the specific 'Assignment' activity link."
+        },
+        {
+          "title": "Add Submission",
+          "description": "Click 'Add submission', upload your file, and save changes."
+        },
+        {
+          "title": "Confirm Submission Status",
+          "description": "Verify that the submission status shows 'Submitted for grading'."
+        }
+      ]
+    },
+    {
+      "intent": "marks",
+      "scope": "course",
+      "path": [
+        "Dashboard",
+        "{course}",
+        "Grades"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "view grades moodle",
+        "check marks moodle",
+        "moodle gradebook",
+        "my results moodle"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Moodle",
+          "description": "Access the Moodle platform with your credentials."
+        },
+        {
+          "title": "Go to Course",
+          "description": "From the 'Dashboard', select the specific course."
+        },
+        {
+          "title": "Access Grades",
+          "description": "In the navigation 'Blocks' or course menu, click 'Grades'."
+        },
+        {
+          "title": "Review Grade Report",
+          "description": "View your grades for all assignments and activities in the 'Grader report'."
+        }
+      ]
+    },
+    {
+      "intent": "syllabus",
+      "scope": "course",
+      "path": [
+        "Dashboard",
+        "{course}",
+        "Syllabus"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "find syllabus moodle",
+        "course outline moodle",
+        "moodle course plan",
+        "syllabus document"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Moodle",
+          "description": "Access the Moodle platform with your credentials."
+        },
+        {
+          "title": "Navigate to Course",
+          "description": "From the 'Dashboard', go to the relevant course."
+        },
+        {
+          "title": "Locate Syllabus",
+          "description": "Look for a 'Syllabus' file or a 'Course Information' section, often at the top."
+        },
+        {
+          "title": "Download/View",
+          "description": "Click on the syllabus document (e.g., PDF) to view or download it."
+        }
+      ]
+    },
+    {
+      "intent": "messaging",
+      "scope": "course",
+      "path": [
+        "Dashboard",
+        "{course}",
+        "Participants",
+        "Message"
+      ],
+      "task_keywords": [
+        "message professor moodle",
+        "contact instructor moodle",
+        "send message teacher moodle",
+        "moodle message faculty"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Moodle",
+          "description": "Access the Moodle platform with your credentials."
+        },
+        {
+          "title": "Go to Participants",
+          "description": "From the course navigation 'Blocks', click 'Participants'."
+        },
+        {
+          "title": "Find Instructor",
+          "description": "Locate your professor's name in the list."
+        },
+        {
+          "title": "Send Message",
+          "description": "Click on their name, then click 'Message' to send a private message."
+        }
+      ]
+    },
+    {
+      "intent": "exams",
+      "scope": "course",
+      "path": [
+        "Dashboard",
+        "{course}",
+        "Quiz"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "take quiz moodle",
+        "start exam moodle",
+        "attempt test moodle",
+        "online quiz moodle"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Moodle",
+          "description": "Access the Moodle platform with your credentials."
+        },
+        {
+          "title": "Navigate to Course",
+          "description": "From the 'Dashboard', go to the specific course."
+        },
+        {
+          "title": "Find Quiz Activity",
+          "description": "Locate and click on the 'Quiz' activity link within the course content."
+        },
+        {
+          "title": "Attempt Quiz",
+          "description": "Read instructions, then click 'Attempt quiz now'."
+        },
+        {
+          "title": "Submit Quiz",
+          "description": "Answer questions, then click 'Finish attempt' and 'Submit all and finish'."
+        }
+      ]
+    },
+    {
+      "intent": "materials",
+      "scope": "course",
+      "path": [
+        "Dashboard",
+        "{course}",
+        "Topics / Weeks",
+        "Resources"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "access course materials moodle",
+        "download course files",
+        "view resources moodle",
+        "course content moodle"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Moodle",
+          "description": "Access the Moodle platform with your credentials."
+        },
+        {
+          "title": "Navigate to Course",
+          "description": "From the 'Dashboard', go to the desired course."
+        },
+        {
+          "title": "Browse Topics/Weeks",
+          "description": "Scroll through the course sections (topics or weeks) to find materials."
+        },
+        {
+          "title": "Open Resources",
+          "description": "Click on files (PDFs, presentations) or links to view/download content."
+        }
+      ]
+    },
+    {
+      "intent": "forums",
+      "scope": "course",
+      "path": [
+        "Dashboard",
+        "{course}",
+        "Forum"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "participate forums moodle",
+        "post in discussion",
+        "reply forum moodle",
+        "moodle discussion board"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Moodle",
+          "description": "Access the Moodle platform with your credentials."
+        },
+        {
+          "title": "Navigate to Course",
+          "description": "From the 'Dashboard', go to the specific course."
+        },
+        {
+          "title": "Find Forum Activity",
+          "description": "Locate and click on the 'Forum' activity link."
+        },
+        {
+          "title": "Add New Discussion/Reply",
+          "description": "Click 'Add a new discussion topic' or 'Reply' to an existing post."
+        },
+        {
+          "title": "Post Message",
+          "description": "Type your message and click 'Post to forum'."
+        }
+      ]
+    },
+    {
+      "intent": "calendar",
+      "scope": "none",
+      "path": [
+        "Dashboard",
+        "Calendar"
+      ],
+      "task_keywords": [
+        "check calendar events moodle",
+        "view schedule moodle",
+        "moodle events",
+        "upcoming deadlines"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Moodle",
+          "description": "Access the Moodle platform with your credentials."
+        },
+        {
+          "title": "Access Calendar",
+          "description": "On the 'Dashboard', locate the 'Calendar' block."
+        },
+        {
+          "title": "View Events",
+          "description": "Click on the calendar to view upcoming assignments, quizzes, and events."
+        },
+        {
+          "title": "Filter by Course",
+          "description": "Optionally filter events by specific courses."
+        }
+      ]
+    },
+    {
+      "intent": "participants",
+      "scope": "course",
+      "path": [
+        "Dashboard",
+        "{course}",
+        "Participants"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "view course participants moodle",
+        "see classmates moodle",
+        "moodle class list",
+        "find course members"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Moodle",
+          "description": "Access the Moodle platform with your credentials."
+        },
+        {
+          "title": "Navigate to Course",
+          "description": "From the 'Dashboard', go to the desired course."
+        },
+        {
+          "title": "Click Participants",
+          "description": "In the course navigation 'Blocks', click 'Participants'."
+        },
+        {
+          "title": "Browse List",
+          "description": "View the list of all enrolled students and instructors in the course."
+        }
+      ]
+    },
+    {
+      "intent": "course",
+      "scope": "course",
+      "derived": true,
+      "path": [
+        "Dashboard",
+        "My courses",
+        "{course}"
+      ],
+      "course_step": 2,
+      "task_keywords": [
+        "open course moodle",
+        "find my course moodle",
+        "moodle course page",
+        "my courses moodle"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Moodle",
+          "description": "Access the Moodle platform with your credentials."
+        },
+        {
+          "title": "Go to My Courses",
+          "description": "From the 'Dashboard', find your list of courses."
+        },
+        {
+          "title": "Open the Course",
+          "description": "Click the course name to open the course page."
+        }
+      ]
+    }
+  ],
+  "canvas": [
+    {
+      "intent": "attendance",
+      "scope": "course",
+      "path": [
+        "Dashboard",
+        "{course}",
+        "Attendance"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "check attendance canvas",
+        "canvas attendance record",
+        "my attendance canvas",
+        "attendance status canvas"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Canvas",
+          "description": "Access the Canvas LMS with your credentials."
+        },
+        {
+          "title": "Go to Course",
+          "description": "From the 'Dashboard', click on the relevant course."
+        },
+        {
+          "title": "Select Attendance",
+          "description": "In the Course Navigation Menu, click on 'Attendance' (or 'Roll Call')."
+        },
+        {
+          "title": "View Records",
+          "description": "Review your attendance entries for the course."
+        }
+      ]
+    },
+    {
+      "intent": "assignments",
+      "scope": "course",
+      "path": [
+        "Dashboard",
+        "{course}",
+        "Assignments"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "submit assignment canvas",
+        "upload homework canvas",
+        "canvas assignment submission",
+        "turn in task"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Canvas",
+          "description": "Access the Canvas LMS with your credentials."
+        },
+        {
+          "title": "Navigate to Course",
+          "description": "From the 'Dashboard', go to the specific course."
+        },
+        {
+          "title": "Click Assignments",
+          "description": "In the Course Navigation Menu, click 'Assignments'."
+        },
+        {
+          "title": "Select Assignment",
+          "description": "Click on the name of the assignment you wish to submit."
+        },
+        {
+          "title": "Submit Assignment",
+          "description": "Click 'Submit Assignment', choose your file(s), and click 'Submit'."
+        }
+      ]
+    },
+    {
+      "intent": "marks",
+      "scope": "global",
+      "path": [
+        "Global Navigation",
+        "Grades"
+      ],
+      "course_step": 2,
+      "task_keywords": [
+        "view grades canvas",
+        "check marks canvas",
+        "canvas grades",
+        "my results canvas"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Canvas",
+          "description": "Access the Canvas LMS with your credentials."
+        },
+        {
+          "title": "Access Grades Global",
+          "description": "From the Global Navigation Menu (left sidebar), click 'Grades'."
+        },
+        {
+          "title": "Select Course (Optional)",
+          "description": "If viewing overall grades, select the specific course."
+        },
+        {
+          "title": "Review Gradebook",
+          "description": "View your current scores and feedback for all assignments."
+        }
+      ]
+    },
+    {
+      "intent": "syllabus",
+      "scope": "course",
+      "path": [
+        "Dashboard",
+        "{course}",
+        "Syllabus"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "find syllabus canvas",
+        "course outline canvas",
+        "canvas course plan",
+        "syllabus document"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Canvas",
+          "description": "Access the Canvas LMS with your credentials."
+        },
+        {
+          "title": "Navigate to Course",
+          "description": "From the 'Dashboard', go to the relevant course."
+        },
+        {
+          "title": "Click Syllabus",
+          "description": "In the Course Navigation Menu, click 'Syllabus'."
+        },
+        {
+          "title": "View Syllabus Details",
+          "description": "Read the course syllabus directly on the page or download the attached file."
+        }
+      ]
+    },
+    {
+      "intent": "messaging",
+      "scope": "global",
+      "path": [
+        "Global Navigation",
+        "Inbox",
+        "Compose"
+      ],
+      "course_step": 3,
+      "task_keywords": [
+        "message professor canvas",
+        "contact instructor canvas",
+        "send message teacher canvas",
+        "canvas inbox faculty"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Canvas",
+          "description": "Access the Canvas LMS with your credentials."
+        },
+        {
+          "title": "Open Inbox",
+          "description": "From the Global Navigation Menu, click 'Inbox'."
+        },
+        {
+          "title": "Compose New Message",
+          "description": "Click the 'Compose a new message' icon."
+        },
+        {
+          "title": "Select Course and Recipient",
+          "description": "Choose the course and then select your instructor from the list."
+        },
+        {
+          "title": "Send Message",
+          "description": "Type your message and click 'Send'."
+        }
+      ]
+    },
+    {
+      "intent": "exams",
+      "scope": "course",
+      "path": [
+        "Dashboard",
+        "{course}",
+        "Quizzes"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "take quiz canvas",
+        "start exam canvas",
+        "attempt test canvas",
+        "online quiz canvas"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Canvas",
+          "description": "Access the Canvas LMS with your credentials."
+        },
+        {
+          "title": "Navigate to Course",
+          "description": "From the 'Dashboard', go to the specific course."
+        },
+        {
+          "title": "Click Quizzes",
+          "description": "In the Course Navigation Menu, click 'Quizzes'."
+        },
+        {
+          "title": "Select Quiz",
+          "description": "Click on the name of the quiz you want to take."
+        },
+        {
+          "title": "Take and Submit Quiz",
+          "description": "Click 'Take the Quiz', answer questions, and then 'Submit Quiz'."
+        }
+      ]
+    },
+    {
+      "intent": "materials",
+      "scope": "course",
+      "path": [
+        "Dashboard",
+        "{course}",
+        "Modules"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "access course modules canvas",
+        "view course content",
+        "canvas learning materials",
+        "course modules list"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Canvas",
+          "description": "Access the Canvas LMS with your credentials."
+        },
+        {
+          "title": "Navigate to Course",
+          "description": "From the 'Dashboard', go to the desired course."
+        },
+        {
+          "title": "Click Modules",
+          "description": "In the Course Navigation Menu, click 'Modules'."
+        },
+        {
+          "title": "Explore Modules",
+          "description": "Browse through the organized modules to find readings, videos, and activities."
+        }
+      ]
+    },
+    {
+      "intent": "announcements",
+      "scope": "course",
+      "path": [
+        "Dashboard",
+        "{course}",
+        "Announcements"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "view announcements canvas",
+        "check news canvas",
+        "read notices canvas",
+        "latest updates canvas"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Canvas",
+          "description": "Access the Canvas LMS with your credentials."
+        },
+        {
+          "title": "Navigate to Course",
+          "description": "From the 'Dashboard', go to the desired course."
+        },
+        {
+          "title": "Click Announcements",
+          "description": "In the Course Navigation Menu, click 'Announcements'."
+        },
+        {
+          "title": "Read Announcements",
+          "description": "View all current and past course announcements."
+        }
+      ]
+    },
+    {
+      "intent": "calendar",
+      "scope": "none",
+      "path": [
+        "Global Navigation",
+        "Calendar"
+      ],
+      "task_keywords": [
+        "check course calendar canvas",
+        "view schedule canvas",
+        "canvas events",
+        "upcoming deadlines"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Canvas",
+          "description": "Access the Canvas LMS with your credentials."
+        },
+        {
+          "title": "Access Calendar Global",
+          "description": "From the Global Navigation Menu, click 'Calendar'."
+        },
+        {
+          "title": "View Course Events",
+          "description": "Your personal and course-specific events and deadlines will be displayed."
+        },
+        {
+          "title": "Filter Calendar",
+          "description": "Use the sidebar to filter events by specific courses."
+        }
+      ]
+    },
+    {
+      "intent": "forums",
+      "scope": "course",
+      "path": [
+        "Dashboard",
+        "{course}",
+        "Discussions"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "participate discussions canvas",
+        "post in forum canvas",
+        "reply discussion canvas",
+        "canvas discussion board"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Canvas",
+          "description": "Access the Canvas LMS with your credentials."
+        },
+        {
+          "title": "Navigate to Course",
+          "description": "From the 'Dashboard', go to the specific course."
+        },
+        {
+          "title": "Click Discussions",
+          "description": "In the Course Navigation Menu, click 'Discussions'."
+        },
+        {
+          "title": "Select Discussion Topic",
+          "description": "Click on the title of the discussion you want to participate in."
+        },
+        {
+          "title": "Reply or Post",
+          "description": "Click 'Reply' to an existing thread or 'Add a new discussion' if allowed."
+        }
+      ]
+    },
+    {
+      "intent": "course",
+      "scope": "course",
+      "derived": true,
+      "path": [
+        "Dashboard",
+        "{course}"
+      ],
+      "course_step": 1,
+      "task_keywords": [
+        "open course canvas",
+        "find my course canvas",
+        "canvas course page",
+        "my courses canvas"
+      ],
+      "verified_route": [
+        {
+          "title": "Log in to Canvas",
+          "description": "Access the Canvas LMS with your credentials."
+        },
+        {
+          "title": "Go to Course",
+          "description": "From the 'Dashboard', click on the relevant course."
+        }
+      ]
+    }
+  ]
+}

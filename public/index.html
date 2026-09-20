@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ACE-Scholar is an AI-powered navigation assistant for Moodle, DigiCampus and Canvas. Ask where something is, or upload a screenshot.">
+  <meta name="theme-color" content="#050807">
+  <title>ACE-Scholar | Your Academic Compass</title>
+  <!-- Retro Monocraft font (jsDelivr CDN); falls back to system monospace -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monocraft@4.0.0/dist/Monocraft.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="cursorGlow" aria-hidden="true"></div>
+
+  <nav class="top-nav" aria-label="Main">
+    <a href="#" class="nav-brand"><span class="nav-brand-icon" aria-hidden="true">⌖</span> ACE-Scholar</a>
+    <div class="nav-links">
+      <a href="#how-it-works">How it works</a>
+      <a href="#about">About</a>
+      <div class="status-badge" id="statusBadge" role="status"><span class="status-dot" aria-hidden="true"></span><span id="statusText">Connecting…</span></div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-crosshair" aria-hidden="true"></div>
+    <span class="eyebrow">Your Academic Compass</span>
+    <h1>Stop Wasting Your Time.<br>Just get your work done.</h1>
+    <p>AI-powered navigation for Moodle, DigiCampus and Canvas. Say what you need, or show us your screen, and we will map the route.</p>
+  </header>
+
+  <main class="console-wrapper">
+    <!-- Left: console -->
+    <section class="navigation-console" aria-labelledby="consoleTitle">
+      <h2 id="consoleTitle" class="sr-only">Find your route</h2>
+
+      <span class="section-label" id="platformLabel">1. Choose your platform</span>
+      <div class="platform-tabs" id="platformTabs" role="radiogroup" aria-labelledby="platformLabel"></div>
+
+      <label class="section-label" for="question">2. Ask where something is</label>
+      <div class="command-input-area">
+        <textarea id="question" maxlength="500" rows="4" spellcheck="true"
+          placeholder="e.g. Where can I find my DBMS attendance?"></textarea>
+        <div class="input-meta">
+          <span id="inputError" class="inline-error" role="alert" hidden></span>
+          <span class="counter" id="counter" aria-hidden="true">0/500</span>
+        </div>
+      </div>
+
+      <div class="suggestions" id="suggestions" aria-label="Example questions"></div>
+
+      <button class="btn-primary" id="submitBtn" type="button">
+        <span class="btn-spinner" aria-hidden="true"></span>
+        <span id="submitText">Find my way</span>
+      </button>
+
+      <span class="section-label upload-label" id="uploadLabel">3. Or show us your screen (optional)</span>
+      <div class="dropzone" id="dropzone">
+        <input type="file" id="screenshotUpload" accept="image/png,image/jpeg,image/webp" aria-labelledby="uploadLabel uploadTitle">
+        <div class="dz-idle" id="dzIdle">
+          <strong id="uploadTitle">Can't find your way? Show us.</strong>
+          <span id="uploadSubtitle">Click, drag a screenshot here, or paste one. PNG, JPEG or WebP.</span>
+        </div>
+        <div class="dz-file" id="dzFile" hidden>
+          <img id="previewImg" alt="Preview of your attached screenshot">
+          <div class="dz-file-info">
+            <strong id="fileName"></strong>
+            <span id="fileMeta"></span>
+          </div>
+          <button type="button" class="btn-ghost" id="removeImage" aria-label="Remove screenshot">Remove</button>
+        </div>
+      </div>
+      <p class="inline-error" id="uploadError" role="alert" hidden></p>
+    </section>
+
+    <!-- Right: results -->
+    <section class="result-area" id="resultBox" aria-live="polite" aria-busy="false" aria-label="Your route"></section>
+  </main>
+
+  <section id="how-it-works" class="info-section">
+    <h2 class="section-title">How the route is built</h2>
+    <div class="path-map">
+      <div class="path-node"><span class="node-step">Step 1</span><h3>Understand</h3><p>Your question becomes an intent (attendance, marks, notes…) and a course name, only from your own words.</p></div>
+      <div class="path-node"><span class="node-step">Step 2</span><h3>Match the platform</h3><p>Moodle, DigiCampus and Canvas each keep their own verified routes. A screenshot can confirm which one you are on.</p></div>
+      <div class="path-node"><span class="node-step">Step 3</span><h3>Map the path</h3><p>You get a visual breadcrumb and numbered steps, trimmed to what is left from where you are now.</p></div>
+      <div class="path-node"><span class="node-step">Step 4</span><h3>Honest answers</h3><p>If something is not mapped, or the screenshot is unclear, we say so instead of guessing.</p></div>
+    </div>
+  </section>
+
+  <section id="about" class="info-section">
+    <h2 class="section-title">About ACE-Scholar</h2>
+    <p class="about-text">
+      <strong>Academic software shouldn't feel like a maze.</strong><br><br>
+      ACE-Scholar helps students navigate unfamiliar academic platforms without hunting through menus. Routes come from a verified navigation database, and AI is used to understand your question and to read screenshots, never to invent menu items or student data. Menus vary between institutions, so always trust what you see on your own screen.
+    </p>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-status">
+        <h4>ACE-Scholar</h4>
+        <p>Currently supporting: DigiCampus · Moodle · Canvas</p>
+        <p class="highlight">More routes are being mapped.</p>
+      </div>
+      <div class="footer-dev">
+        <p>Built by <strong>NANDINI SHARMA</strong></p>
+        <div class="social-links">
+          <a href="https://github.com/04nandini0" aria-label="GitHub">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/nandini-sharma-b525b0347" aria-label="LinkedIn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 ACE-Scholar. All rights reserved.</div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
